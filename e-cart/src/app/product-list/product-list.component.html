@@ -1,8 +1,15 @@
-<img [src]="product.pImage" >
-<p>Name: {{product.name}}</p>
-<p>Price: ${{product.price}} </p>
-<p>Color: {{product.color}} </p>
-<p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
-<p> {{product.instock > 0 ? 'Only ' + product.instock + ' left ': 'Not in Stock'}} </p>
- 
-<button [disabled] = "!(product.instock > 0)" >Buy Now</button>
+<div class="e-cart--product--container">
+    <img [src]="product.pImage" >
+    <p>Name: {{product.name}}</p>
+    <p>Price: ${{product.price}} </p>
+    <p>Color: {{product.color}} </p>
+    <p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
+    <p> {{product.instock > 0 ? 'Only ' + product.instock + ' left ': 'Not in Stock'}} </p>
+    
+    <button [disabled] = "!(product.instock > 0)" >Buy Now</button>
+   <!--- <input [value] = "name" (input)="onNameChange($event)"> <br>
+    <p>name = {{name}}</p> -->
+    <button (click) = "decreamentCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click) = "increamentCartValue()">+</button>
+</div>  
