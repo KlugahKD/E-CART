@@ -532,5 +532,6 @@ export class ProductListComponent {
       slug: "michael-feburary-sk8-hi"
     }
   ];
+prod: any;
 
 }
