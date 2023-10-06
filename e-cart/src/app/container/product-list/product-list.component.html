@@ -6,7 +6,7 @@
             </div>  
 
             
-            <div class="ecart-on-sale-tag">75% OFF</div>
+            <div class="ecart-on-sale-tag" *ngIf="prod.discountPrice">{{ (100 - (prod.discountPrice / prod.price * 100)).toFixed(0) }} %</div>
         </div>
         <div class="ecart--product--image">
             <img [src]="prod.imageURL" class="ecart--product--image">
