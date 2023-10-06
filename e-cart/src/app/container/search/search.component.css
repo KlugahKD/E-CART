@@ -23,6 +23,14 @@
     margin-left: -5px;
     color:#fff;
 }
+.btn-search-disabled{
+    padding: 16px 30px;
+    background-color: #aaa;
+    margin-left: 0px;
+    color: #999;
+    border: #aaa 1px solid;
+    cursor: not-allowed;
+}
 
 .ecart-search-result-for{
     margin: 20px auto;

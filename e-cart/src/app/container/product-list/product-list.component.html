@@ -6,7 +6,7 @@
             </div>  
 
             
-            <div class="ecart-on-sale-tag" *ngIf="prod.discountPrice">{{ (100 - (prod.discountPrice / prod.price * 100)).toFixed(0) }} %</div>
+            <div class="ecart-on-sale-tag" *ngIf="prod.discountPrice">{{ (100 - (prod.discountPrice / prod.price * 100)).toFixed(0) }}% OFF</div>
         </div>
         <div class="ecart--product--image">
             <img [src]="prod.imageURL" class="ecart--product--image">
@@ -17,5 +17,8 @@
         <div class="ecart--product--name">{{prod.name}}</div>
         <div class="ecart--product--category">{{prod.gender}} . {{prod.category}} . {{prod.brand}}</div>
         <div class="ecart--product--available-colors">{{prod.color.length}} Colors . Best Seller</div>
+        <div class="ecart--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: prod.is_in_inventory ? 'Green' : 'Red'}">
+            {{ prod.is_in_inventory ? 'Available in Stock' : 'Not available in stock' }}
+        </div>
     </div>
 </div>
